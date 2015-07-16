@@ -39,6 +39,7 @@ categories = [
 			'http://feeds.foxnews.com/foxnews/tech',
 			'http://rss.cnn.com/rss/cnn_topstories.rss',
 			'http://rss.cnn.com/rss/cnn_tech.rss',
+			'http://feeds.feedburner.com/TechCrunch/'
 		]
 	},
 	{
