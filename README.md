@@ -10,4 +10,5 @@ inspired by:
 - run `vagrant up` ( You will need vagrant installed )
 - This will create your environment running Nginx + Unicorn as well as run all rake and bundle tasks needed
 - You can view locally @ `192.168.56.102`
+- You can read more about using [vagrant + puppet + nginx & unicorn here](https://github.com/DrewDahlman/vagrant-puppet-boilerplate)
 - If front end is your thing check out the `frontend` directory for some hotness there. 

@@ -1,0 +1,9 @@
+development:
+  host: localhost
+  adapter: postgresql
+  encoding: unicode
+  database: shitty_news
+  username: dev
+  password: secret
+  template: template0
+  pool: 5

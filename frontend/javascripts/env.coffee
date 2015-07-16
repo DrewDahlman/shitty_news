@@ -1,0 +1,1 @@
+window.GR = window.GR || {}
