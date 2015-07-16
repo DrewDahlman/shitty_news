@@ -11,13 +11,11 @@ gem 'pg'
 gem 'uglifier', '>= 1.3.0'
 
 ## Bootstrap
-gem "therubyracer"
+gem 'therubyracer'
 gem 'jquery-rails'
 
-## Uploads
-gem 'carrierwave'
-gem "fog"
-gem 'rmagick'
+## Markov Chains v1
+gem 'marky_markov'
 
 ## Development
 group :development do
