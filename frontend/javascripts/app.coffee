@@ -22,4 +22,4 @@ module.exports = Application
 
 $ ->
   # instance
-  GR.instance = new Application()
+  SN.instance = new Application()

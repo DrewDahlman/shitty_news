@@ -1,1 +1,1 @@
-window.GR = window.GR || {}
+window.SN = window.SN || {}
