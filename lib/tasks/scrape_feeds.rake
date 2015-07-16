@@ -13,7 +13,7 @@ namespace :scrape_feeds do
 	#
 	#--------------------------------------------------------------
   desc "Scrape our feeds"
-  task scrape: :environment do
+  task :scrape do
 
   	## Categories
   	categories = Category.all
@@ -57,7 +57,7 @@ namespace :scrape_feeds do
   #   Write some articles
   #
   #--------------------------------------------------------------
-  task create: :environment do 
+  task :create do 
 
   	top_dict = ""
 
