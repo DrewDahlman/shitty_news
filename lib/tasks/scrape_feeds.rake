@@ -97,7 +97,7 @@ namespace :scrape_feeds do
 				end
 			end
 		end
-
+		
 		## Make todays top headline
 		generator = MarkovChains::Generator.new(top_dict, 1)
 
