@@ -8,5 +8,6 @@ class SiteController < ApplicationController
 
   def update
   	expire_action :action => index
+  	redirect_to "/"
   end
 end
