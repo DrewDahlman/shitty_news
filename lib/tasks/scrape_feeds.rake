@@ -131,13 +131,13 @@ namespace :scrape_feeds do
 
 		open(FlickRaw.url_o info) do |src|
 			binary = src.read
-			open("tmp/flickr.jpg", 'wb') { |f| f.write binary }
+			open("public/flickr.jpg", 'wb') { |f| f.write binary }
 		end
 
 		## Ship it!
 		headline = TopHeadline.new()
 		headline.title = title
-		headline.photo = File.open("tmp/flickr.jpg")
+		headline.photo = File.open("/flickr.jpg")
 		headline.save
 
 		## Expire the cache
