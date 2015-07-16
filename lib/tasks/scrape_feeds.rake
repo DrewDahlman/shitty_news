@@ -113,7 +113,7 @@ namespace :scrape_feeds do
 		FlickRaw.shared_secret = ENV["FLICKR_SECRET"]
 		 
 		args = {
-			tags: "1680x1050,news",
+			tags: "#{title.gsub(/[^a-z0-9\s]/i, '').gsub(' ','')}",
 			tag_mode: "all",
 			per_page: 500
 		}
