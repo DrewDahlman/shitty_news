@@ -35,3 +35,5 @@ config/puppet/manifests/site.pp
 config/puppet/templates/bootstrap.sh
 
 config/puppet/templates/puppet.sh
+
+puppet.tgz
