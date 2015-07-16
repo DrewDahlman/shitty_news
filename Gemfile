@@ -13,10 +13,16 @@ gem 'uglifier', '>= 1.3.0'
 ## Bootstrap
 gem 'therubyracer'
 gem 'jquery-rails'
+gem 'flickraw'
 
 ## Markov Chains v1
 gem 'marky_markov'
 gem "markov_chains"
+
+## Uploads
+gem 'carrierwave'
+gem "fog"
+gem 'rmagick'
 
 ## Development
 group :development do

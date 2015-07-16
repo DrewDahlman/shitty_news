@@ -3,6 +3,7 @@ require 'open-uri'
 require 'action_view'
 require 'markov_chains'
 require 'marky_markov'
+require 'flickraw'
 
 namespace :scrape_feeds do
 
@@ -66,7 +67,7 @@ namespace :scrape_feeds do
 			## Define our sources based on the category
 			sources = cat.sources.where(["sources.created_at > ?", 3.hours.ago])
 			$i = 0
-			while $i < 2
+			while $i < rand(1..3)
 				## Create empty dictionary to use
 				tmp_dict = ""
 
@@ -75,6 +76,9 @@ namespace :scrape_feeds do
 					## Fill the dictionary
 					tmp_dict = tmp_dict + source.title.to_s.downcase + " \n "
 					top_dict = top_dict + source.title.to_s.downcase + " \n "
+
+					## Check for any images
+					source.content
 				end
 
 				## Make the chains
@@ -97,14 +101,42 @@ namespace :scrape_feeds do
 				end
 			end
 		end
-		
+
 		## Make todays top headline
 		generator = MarkovChains::Generator.new(top_dict, 1)
 
 		## Mod the text a bit
 		title = generator.get_sentences( 1 )[0].capitalize.gsub("  ", " ")
 
+		## Get a flicker image
+		FlickRaw.api_key="ec356446bdaa06ee6efb7297f042fa50"
+		FlickRaw.shared_secret="5a391e3dc8c42032"
+		 
+		args = {
+			tags: "1680x1050,news,tech,current,politics,nature",
+			tag_mode: "all",
+			per_page: 500
+		}
+		 
+		while true	
+			pictures = flickr.photos.search(args).to_a
+			pic = pictures.sample
+			info = flickr.photos.getInfo(photo_id: pic['id'])
+
+			break if info.respond_to? :originalsecret
+		end
+		
+
+		open(FlickRaw.url_o info) do |src|
+			binary = src.read
+			open("tmp/flickr.jpg", 'wb') { |f| f.write binary }
+		end
+
 		## Ship it!
-		TopHeadline.create(:title => title)
+		headline = TopHeadline.new()
+		headline.title = title
+		headline.photo = File.open("tmp/flickr.jpg")
+		headline.save
+
   end
 end

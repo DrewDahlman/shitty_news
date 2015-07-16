@@ -12,6 +12,8 @@
 	</section>
 
 	<section id='top-story'>
-		<%= @topHeadline.title %>
+		<div class='top-story-photo' style='background-image: url(<%= @topHeadline.photo.url %>)'>
+			<div class='top-story-headline'><%= @topHeadline.title %></div>
+		</div>
 	</section>
 </div>

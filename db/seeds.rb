@@ -20,7 +20,8 @@ categories = [
 			'http://feeds.foxnews.com/foxnews/opinion',
 			'http://feeds.foxnews.com/foxnews/world',
 			'http://rss.cnn.com/rss/cnn_topstories.rss',
-			'http://rss.cnn.com/rss/cnn_world.rss'
+			'http://rss.cnn.com/rss/cnn_world.rss',
+			'http://feeds2.feedburner.com/time/topstories'
 		]
 	},
 	{
@@ -37,7 +38,7 @@ categories = [
 			'http://feeds.foxnews.com/foxnews/science',
 			'http://feeds.foxnews.com/foxnews/tech',
 			'http://rss.cnn.com/rss/cnn_topstories.rss',
-			'http://rss.cnn.com/rss/cnn_tech.rss'
+			'http://rss.cnn.com/rss/cnn_tech.rss',
 		]
 	},
 	{
@@ -49,7 +50,8 @@ categories = [
 			'http://feeds.foxnews.com/foxnews/most-popular',
 			'http://feeds.foxnews.com/foxnews/opinion',
 			'http://rss.cnn.com/rss/cnn_topstories.rss',
-			'http://rss.cnn.com/rss/cnn_allpolitics.rss'
+			'http://rss.cnn.com/rss/cnn_allpolitics.rss',
+			'http://feeds2.feedburner.com/time/topstories'
 		]
 	},
 	{
@@ -66,7 +68,8 @@ categories = [
 			'http://feeds.foxnews.com/foxnews/opinion',
 			'http://feeds.foxnews.com/foxnews/national',
 			'http://rss.cnn.com/rss/cnn_topstories.rss',
-			'http://rss.cnn.com/rss/cnn_us.rss'
+			'http://rss.cnn.com/rss/cnn_us.rss',
+			'http://feeds2.feedburner.com/time/topstories'
 		]
 	},
 	{
