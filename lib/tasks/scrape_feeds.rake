@@ -91,7 +91,7 @@ namespace :scrape_feeds do
 					## Mod the text a bit
 					# title = generator.get_sentences( 1 )[0].capitalize.gsub("  ", " ")
 					title = markov.generate_n_sentences 1
-					title = title.capitalize.gsub("  ", " ")
+					title = title.capitalize.gsub("<title>"," ").gsub("</title>"," ").gsub("  ", " ")
 					
 					## if it's long enough but not too long let it pass if not keep moving...
 					if title.length > 5 && title.split(" ").length < 30
@@ -114,7 +114,7 @@ namespace :scrape_feeds do
 		## Mod the text a bit
 		# title = generator.get_sentences( 1 )[0].capitalize.gsub("  ", " ")
 		title = markov.generate_n_sentences 1
-		title = title.capitalize.gsub("  ", " ")
+		title = title.capitalize.gsub("<title>"," ").gsub("</title>"," ").gsub("  ", " ")
 
 		## Get a flicker image
 		FlickRaw.api_key = ENV["FLICKR_KEY"]
