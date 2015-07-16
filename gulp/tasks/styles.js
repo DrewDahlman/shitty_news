@@ -13,7 +13,7 @@
 */
 
 var gulp = require('gulp'),
-    sass = require('gulp-ruby-sass'),
+    sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     handleErrors = require('../util/handleErrors');
 

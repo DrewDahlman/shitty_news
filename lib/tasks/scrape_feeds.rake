@@ -137,7 +137,7 @@ namespace :scrape_feeds do
 		## Ship it!
 		headline = TopHeadline.new()
 		headline.title = title
-		headline.photo = File.open("/flickr.jpg")
+		headline.photo = File.open("public/flickr.jpg")
 		headline.save
 
 		## Expire the cache
