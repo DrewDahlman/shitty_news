@@ -16,7 +16,7 @@ namespace :scrape_feeds do
   task scrape: :environment do
 
   	## Categories
-  	categories = Category.all
+  	categories = Category.all.order("RANDOM()")
 
   	## Loop over each of them
   	categories.each do | category |
