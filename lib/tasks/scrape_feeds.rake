@@ -84,10 +84,14 @@ namespace :scrape_feeds do
 				## Make the chains
 				begin
 					## Start the generator
-					generator = MarkovChains::Generator.new(tmp_dict, 1)
+					# generator = MarkovChains::Generator.new(tmp_dict, 1)
+					markov = MarkyMarkov::TemporaryDictionary.new
+					markov.parse_string tmp_dict
 
 					## Mod the text a bit
-					title = generator.get_sentences( 1 )[0].capitalize.gsub("  ", " ")
+					# title = generator.get_sentences( 1 )[0].capitalize.gsub("  ", " ")
+					title = markov.generate_n_sentences 1
+					title = title.capitalize.gsub("  ", " ")
 					
 					## if it's long enough but not too long let it pass if not keep moving...
 					if title.length > 5 && title.split(" ").length < 30
@@ -103,10 +107,14 @@ namespace :scrape_feeds do
 		end
 
 		## Make todays top headline
-		generator = MarkovChains::Generator.new(top_dict, 1)
+		# generator = MarkovChains::Generator.new(top_dict, 1)
+		markov = MarkyMarkov::TemporaryDictionary.new
+		markov.parse_string tmp_dict
 
 		## Mod the text a bit
-		title = generator.get_sentences( 1 )[0].capitalize.gsub("  ", " ")
+		# title = generator.get_sentences( 1 )[0].capitalize.gsub("  ", " ")
+		title = markov.generate_n_sentences 1
+		title = title.capitalize.gsub("  ", " ")
 
 		## Get a flicker image
 		FlickRaw.api_key = ENV["FLICKR_KEY"]
