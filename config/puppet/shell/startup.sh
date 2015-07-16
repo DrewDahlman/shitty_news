@@ -21,9 +21,5 @@ echo "Running bundle and rake for safety..."
 su -l vagrant -c 'bundle install'
 su -l vagrant -c 'rake db:migrate'
 
-echo "Starting debug server..."
-su -l vagrant -c "rails s"
-echo "For debug run server with port 3000"
-
 echo "Starting Unicorn..."
 sudo service unicorn start
