@@ -111,9 +111,11 @@ namespace :scrape_feeds do
 		## Get a flicker image
 		FlickRaw.api_key = ENV["FLICKR_KEY"]
 		FlickRaw.shared_secret = ENV["FLICKR_SECRET"]
-		 
+		
+		terms = ['news','sports','technology','nature','politics','animals']
+
 		args = {
-			tags: "#{title.gsub(/[^a-z0-9\s]/i, '').gsub(' ','')}",
+			tags: "#{terms[rand(0..5)]}",
 			tag_mode: "all",
 			per_page: 500
 		}
@@ -138,5 +140,8 @@ namespace :scrape_feeds do
 		headline.photo = File.open("tmp/flickr.jpg")
 		headline.save
 
+		## Expire the cache
+		session = ActionDispatch::Integration::Session.new(Rails.application)
+	  session.get "/update"
   end
 end
