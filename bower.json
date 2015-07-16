@@ -17,7 +17,6 @@
   "dependencies": {
     "jquery": null,
     "modernizr": null,
-    "underscore": null,
-    "jquery-easing": null
+    "underscore": null
   }
 }

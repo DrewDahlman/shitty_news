@@ -16,6 +16,7 @@ gem 'jquery-rails'
 
 ## Markov Chains v1
 gem 'marky_markov'
+gem "markov_chains"
 
 ## Development
 group :development do

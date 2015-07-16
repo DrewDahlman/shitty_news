@@ -1,0 +1,10 @@
+<div class='content'>
+	<section id='headlines'>
+		<h1>Top Shitty News, June 15th 2015</h1>
+		<% $i = 0 %>
+		<% while $i < 10 do %>
+		<%= render :partial => "shared/post", locals: () %>
+		<% $i += 1 %>
+		<% end %>
+	</section>
+</div>

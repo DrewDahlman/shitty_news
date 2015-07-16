@@ -2,9 +2,35 @@ html, body
 	width: 100%
 	height: 100%
 	background:
-		color: $black
+		color: $white
 	font:
 		family: "Helvetica"
-		size: 24px
-		weight: bold
-	color: $white
+		size: 12px
+
+.content
+	position: relative
+	margin: auto
+	max-width: $xl_desktop
+	width: 90%
+
+	h1
+		font:
+			size: 20px
+			weight: bold
+		color: $black
+		margin:
+			bottom: 10px
+		padding:
+			bottom: 10px
+		border:
+			bottom: 1px solid $gray
+
+	#headlines
+		width: 100%
+		max-width: 900px
+
+// Layout
+.clearfix
+	position: relative
+	clear: both
+
