@@ -36,17 +36,18 @@ namespace :scrape_feeds do
 						## Loop over each feed item
 						feed.items.each do |item|
 
-							## Create a source
-							source = Source.where(:title => item.title, :link => item.link, :url_id => url.id).first_or_create
+							if item.title != nil && item.link != nil
+									## Create a source
+									source = Source.where(:title => item.title, :link => item.link, :url_id => url.id).first_or_create
+							end
 						end
 					rescue
 
 					end
-					
+
   			end
   		end
   	end
-		puts "Completed Scrape..."
 		Rake::Task['scrape_feeds:create'].invoke
   end
 
@@ -61,23 +62,36 @@ namespace :scrape_feeds do
 		Category.all.each do | cat |
 
 			## Define our sources based on the category
-			sources = cat.sources
+			sources = cat.sources.where(["sources.created_at > ?", 3.hours.ago])
+			$i = 0
+			while $i < 2
+				## Create empty dictionary to use
+				tmp_dict = ""
 
-			## Create empty dictionary to use
-			tmp_dict = ""
+				## Loop over the sources
+				sources.each do | source |
+					## Fill the dictionary
+					tmp_dict = tmp_dict + source.title.to_s.downcase + " \n "
+				end
 
-			## Loop over the sources
-			sources.each do | source |
-				## Fill the dictionary
-				tmp_dict = tmp_dict + source.title.to_s.downcase + " \n "
+				begin
+					## Start the generator
+					generator = MarkovChains::Generator.new(tmp_dict, 1)
+
+					## Mod the text a bit
+					article = generator.get_sentences( 1 )[0].capitalize.gsub("  ", " ")
+					
+					## if it's long enough but not too long let it pass if not keep moving...
+					if article.length > 5 && article.split(" ").length < 30
+
+						# Print it, it's perfect!
+						Article.where( :title => article, :category_id => cat.id).first_or_create
+						$i += 1
+					end
+				rescue
+
+				end
 			end
-
-			## Start the generator
-			generator = MarkovChains::Generator.new(tmp_dict, 1)
-			article = generator.get_sentences( 1 )
-			puts "Category: #{cat.title}"
-			puts article[0].capitalize.gsub("  ", " ")
-			puts ""
 		end
   end
 end

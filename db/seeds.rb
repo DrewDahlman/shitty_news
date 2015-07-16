@@ -102,6 +102,21 @@ categories = [
 			'http://feeds.foxnews.com/foxnews/science',
 			'http://rss.cnn.com/rss/cnn_topstories.rss'
 		]
+	},
+	{
+		:title => "Sports",
+		:slug => "sports",
+		:urls => [
+			'http://www.nfl.com/rss/rsslanding?searchString=home',
+			'http://www.nfl.com/rss/rsslanding?searchString=gamehighlightsVideo',
+			'http://www.nhl.com/rss/news.xml',
+			'http://www.nba.com/rss/nba_rss.xml',
+			'http://www.fifa.com/rss/index.xml',
+			'http://api.foxsports.com/v1/rss?partnerKey=zBaFxRyGKCfxBagJG9b8pqLyndmvo7UU&tag=mlb',
+			'http://api.foxsports.com/v1/rss?partnerKey=zBaFxRyGKCfxBagJG9b8pqLyndmvo7UU&tag=nascar',
+			'http://api.foxsports.com/v1/rss?partnerKey=zBaFxRyGKCfxBagJG9b8pqLyndmvo7UU&tag=tennis',
+			'http://api.foxsports.com/v1/rss?partnerKey=zBaFxRyGKCfxBagJG9b8pqLyndmvo7UU&tag=olympics'
+		]
 	}
 ]
 
