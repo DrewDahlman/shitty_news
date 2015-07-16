@@ -109,11 +109,11 @@ namespace :scrape_feeds do
 		title = generator.get_sentences( 1 )[0].capitalize.gsub("  ", " ")
 
 		## Get a flicker image
-		FlickRaw.api_key="ec356446bdaa06ee6efb7297f042fa50"
-		FlickRaw.shared_secret="5a391e3dc8c42032"
+		FlickRaw.api_key = ENV["FLICKR_KEY"]
+		FlickRaw.shared_secret = ENV["FLICKR_SECRET"]
 		 
 		args = {
-			tags: "1680x1050,news,tech,current,politics,nature",
+			tags: "1680x1050,news",
 			tag_mode: "all",
 			per_page: 500
 		}
