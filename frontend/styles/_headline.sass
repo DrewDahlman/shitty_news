@@ -1,33 +1,41 @@
 article.post-headline
 	position: relative
-	max-width: 900px
+	max-width: 320px
 	min-height: 30px
 	padding:
 		top: 15px
 		bottom: 15px
 	border:
-		bottom: 1px solid rgba(0,0,0,.1)
+		top: 1px solid rgba(0,0,0,.1)
 	background:
-		color: rgba(0,0,0,.02)
+		color: rgba(0,0,0,0)
+	cursor: pointer
+	transition: all .15s
 
 	.headline
 		position: relative
 		float: left
 		font:
-			size: 18px
-		margin:
-			left: 20px
+			size: 12px
+		padding:
+			left: 10px
 			top: 5px
-		width: 80%
+			right: 10px
+		width: 100%
+		line-height: 16px
 		box-sizing: border-box
 
 	.poo
 		position: relative
 		float: left
-		height: 30px
-		width: 30px
+		height: 20px
+		width: 20px
 		img
 			width: 100%
 		margin:
 			top: 10px
 			left: 10px
+
+	&:hover
+		background:
+			color: rgba(0,0,0,.02)

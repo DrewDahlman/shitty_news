@@ -58,8 +58,10 @@ namespace :scrape_feeds do
   #--------------------------------------------------------------
   task create: :environment do 
 
+  	top_dict = ""
+
   	## Loop over the categories
-		Category.all.each do | cat |
+		Category.where.not(slug: 'top_headline').each do | cat |
 
 			## Define our sources based on the category
 			sources = cat.sources.where(["sources.created_at > ?", 3.hours.ago])
@@ -72,20 +74,22 @@ namespace :scrape_feeds do
 				sources.each do | source |
 					## Fill the dictionary
 					tmp_dict = tmp_dict + source.title.to_s.downcase + " \n "
+					top_dict = top_dict + source.title.to_s.downcase + " \n "
 				end
 
+				## Make the chains
 				begin
 					## Start the generator
 					generator = MarkovChains::Generator.new(tmp_dict, 1)
 
 					## Mod the text a bit
-					article = generator.get_sentences( 1 )[0].capitalize.gsub("  ", " ")
+					title = generator.get_sentences( 1 )[0].capitalize.gsub("  ", " ")
 					
 					## if it's long enough but not too long let it pass if not keep moving...
-					if article.length > 5 && article.split(" ").length < 30
+					if title.length > 5 && title.split(" ").length < 30
 
 						# Print it, it's perfect!
-						Article.where( :title => article, :category_id => cat.id).first_or_create
+						Article.where( :title => title, :category_id => cat.id).first_or_create
 						$i += 1
 					end
 				rescue
@@ -93,5 +97,14 @@ namespace :scrape_feeds do
 				end
 			end
 		end
+
+		## Make todays top headline
+		generator = MarkovChains::Generator.new(top_dict, 1)
+
+		## Mod the text a bit
+		title = generator.get_sentences( 1 )[0].capitalize.gsub("  ", " ")
+
+		## Ship it!
+		TopHeadline.create(:title => title)
   end
 end

@@ -1,10 +1,17 @@
 <div class='content'>
 	<section id='headlines'>
-		<h1>Top Shitty News, June 15th 2015</h1>
-		<% $i = 0 %>
-		<% while $i < 10 do %>
-		<%= render :partial => "shared/post", locals: () %>
-		<% $i += 1 %>
+		<h1>Top Shitty News, <%= @today.strftime("%B #{@today.day.ordinalize}, %Y") %></h1>
+		<% @categories.each do | cat | %>
+			<div class='category'>
+				<h2><%= cat.title %></h2>
+				<% cat.articles.where('created_at < ?', @today).order('id DESC').limit(5).each do | article | %>
+					<%= render :partial => "shared/post", locals: ({article: article}) %>
+				<% end %>
+			</div>
 		<% end %>
+	</section>
+
+	<section id='top-story'>
+		<%= @topHeadline.title %>
 	</section>
 </div>
