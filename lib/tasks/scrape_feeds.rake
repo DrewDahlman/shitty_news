@@ -108,7 +108,7 @@ namespace :scrape_feeds do
 
 		## Make todays top headline
 		# generator = MarkovChains::Generator.new(top_dict, 1)
-		markov = MarkyMarkov::TemporaryDictionary.new
+		markov = MarkyMarkov::TemporaryDictionary.new(top_dict, 2)
 		markov.parse_string top_dict
 
 		## Mod the text a bit
