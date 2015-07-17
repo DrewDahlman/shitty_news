@@ -17,4 +17,10 @@ inspired by:
 - This will create your environment running Nginx + Unicorn as well as run all rake and bundle tasks needed
 - You can view locally @ `192.168.56.102`
 - You can read more about using [vagrant + puppet + nginx & unicorn here](https://github.com/DrewDahlman/vagrant-puppet-boilerplate)
-- If front end is your thing check out the `frontend` directory for some hotness there. 
+- If front end is your thing check out the `frontend` directory for some hotness there.
+
+## Scrape
+- `vagrant ssh`
+- `rake db:seed` This only needs to be run the first time, and if new sources are added
+- `rake scrape_feeds:scrape` this will take a second 
+- Check it out!
