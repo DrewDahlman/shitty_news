@@ -5,7 +5,12 @@
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= csrf_meta_tags %>
   <meta name="keywords" content="Shitty news, news, shitty, markov chains"/>
+
+  <% if params[:action] != "show" && params[:action] != "featured" %>
 		<meta name="description" content="Your number one source for Shitty News."/>
+  <% else %>
+		<meta name="description" content="<%= @article.title %>"/>
+	<% end %>
 
   <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
@@ -25,7 +30,7 @@
 	<meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
 
-	<% if params[:action] != "show" || params[:action] != "featured" %>
+	<% if params[:action] != "show" && params[:action] != "featured" %>
 	<!-- FB -->
 		<meta https-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta property="og:title" content="Shitty News" />
@@ -40,7 +45,11 @@
 		<meta property="og:title" content="Shitty News" />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="http://shitty.news" />
-		<meta property="og:image" content="http://shitty.news/card.jpg" />
+		<% if params[:action] == "featured" %>
+			<meta property="og:image" content="<%= @article.photo.url %>" />
+		<% else %>
+			<meta property="og:image" content="http://shitty.news/card.jpg" />
+		<% end %>
 		<meta property="og:site_name" content="Shitty News" />
 		<meta property="og:description" content="<%= @article.title %>"/>
 	<% end %>
