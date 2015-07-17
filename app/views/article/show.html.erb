@@ -12,7 +12,8 @@
 	</section>
 	<section id='top-story'>
 		<div id='article-meta'>
-			Posted: <%= time_ago_in_words(@article.created_at.to_s) %>
+			Posted: <%= time_ago_in_words(@article.created_at.to_s) %> in <%= @article.category.slug %>
+			<br/><br/>
 			<h1><%= @article.title %></h1>
 		</div>
 		<div id='share'>
