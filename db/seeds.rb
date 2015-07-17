@@ -22,6 +22,7 @@ categories = [
 			'http://rss.cnn.com/rss/cnn_topstories.rss',
 			'http://rss.cnn.com/rss/cnn_world.rss',
 			'http://feeds2.feedburner.com/time/topstories',
+			'http://feeds.feedburner.com/TheOnion/'
 		]
 	},
 	{
@@ -53,6 +54,7 @@ categories = [
 			'http://rss.cnn.com/rss/cnn_topstories.rss',
 			'http://rss.cnn.com/rss/cnn_allpolitics.rss',
 			'http://feeds2.feedburner.com/time/topstories',
+			'http://feeds.feedburner.com/TheOnion/'
 		]
 	},
 	{
@@ -71,6 +73,7 @@ categories = [
 			'http://rss.cnn.com/rss/cnn_topstories.rss',
 			'http://rss.cnn.com/rss/cnn_us.rss',
 			'http://feeds2.feedburner.com/time/topstories',
+			'http://feeds.feedburner.com/TheOnion/'
 		]
 	},
 	{
@@ -93,7 +96,8 @@ categories = [
 			'http://rss.cnn.com/rss/cnn_topstories.rss',
 			'http://rss.cnn.com/rss/money_latest.rss',
 			'https://www.reddit.com/r/business/.rss',
-			'https://www.reddit.com/r/finance/.rss'
+			'https://www.reddit.com/r/finance/.rss',
+			'http://feeds.feedburner.com/TheOnion/'
 		]
 	},
 	{
@@ -107,7 +111,8 @@ categories = [
 			'http://feeds.foxnews.com/foxnews/science',
 			'http://rss.cnn.com/rss/cnn_topstories.rss',
 			'https://www.reddit.com/r/science/.rss',
-			'https://www.reddit.com/r/shittyaskscience/.rss'
+			'https://www.reddit.com/r/shittyaskscience/.rss',
+			'http://feeds.feedburner.com/TheOnion/'
 		]
 	},
 	{
