@@ -22,8 +22,6 @@ categories = [
 			'http://rss.cnn.com/rss/cnn_topstories.rss',
 			'http://rss.cnn.com/rss/cnn_world.rss',
 			'http://feeds2.feedburner.com/time/topstories',
-			'https://www.reddit.com/r/explainlikeimfive/.rss',
-			'https://www.reddit.com/r/tifu/.rss'
 		]
 	},
 	{
@@ -42,8 +40,6 @@ categories = [
 			'http://rss.cnn.com/rss/cnn_topstories.rss',
 			'http://rss.cnn.com/rss/cnn_tech.rss',
 			'http://feeds.feedburner.com/TechCrunch/',
-			'https://www.reddit.com/r/explainlikeimfive/.rss',
-			'https://www.reddit.com/r/tifu/.rss'
 		]
 	},
 	{
@@ -57,8 +53,6 @@ categories = [
 			'http://rss.cnn.com/rss/cnn_topstories.rss',
 			'http://rss.cnn.com/rss/cnn_allpolitics.rss',
 			'http://feeds2.feedburner.com/time/topstories',
-			'https://www.reddit.com/r/explainlikeimfive/.rss',
-			'https://www.reddit.com/r/tifu/.rss'
 		]
 	},
 	{
@@ -77,8 +71,6 @@ categories = [
 			'http://rss.cnn.com/rss/cnn_topstories.rss',
 			'http://rss.cnn.com/rss/cnn_us.rss',
 			'http://feeds2.feedburner.com/time/topstories',
-			'https://www.reddit.com/r/explainlikeimfive/.rss',
-			'https://www.reddit.com/r/tifu/.rss'
 		]
 	},
 	{
@@ -87,9 +79,7 @@ categories = [
 		:urls => [
 			'http://www.reddit.com/r/gaming/.rss',
 			'http://www.wired.com/category/reviews/feed/',
-			'http://feeds.foxnews.com/foxnews/opinion',
-			'https://www.reddit.com/r/explainlikeimfive/.rss'
-		]
+			'http://feeds.foxnews.com/foxnews/opinion',		]
 	},
 	{
 		:title => "Business",
@@ -102,7 +92,6 @@ categories = [
 			'http://feeds.foxnews.com/foxnews/opinion',
 			'http://rss.cnn.com/rss/cnn_topstories.rss',
 			'http://rss.cnn.com/rss/money_latest.rss',
-			'https://www.reddit.com/r/explainlikeimfive/.rss',
 			'https://www.reddit.com/r/business/.rss',
 			'https://www.reddit.com/r/finance/.rss'
 		]
@@ -117,7 +106,6 @@ categories = [
 			'http://feeds.foxnews.com/foxnews/opinion',
 			'http://feeds.foxnews.com/foxnews/science',
 			'http://rss.cnn.com/rss/cnn_topstories.rss',
-			'https://www.reddit.com/r/explainlikeimfive/.rss',
 			'https://www.reddit.com/r/science/.rss',
 			'https://www.reddit.com/r/shittyaskscience/.rss'
 		]
