@@ -20,8 +20,10 @@ ActiveRecord::Schema.define(version: 20150716141518) do
     t.text     "title"
     t.text     "content"
     t.integer  "category_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "hash_url"
+    t.integer  "views",       default: 0
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
   create_table "categories", force: :cascade do |t|
@@ -44,8 +46,10 @@ ActiveRecord::Schema.define(version: 20150716141518) do
     t.string   "title"
     t.string   "photo"
     t.text     "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "hash_url"
+    t.integer  "views",      default: 0
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "urls", force: :cascade do |t|

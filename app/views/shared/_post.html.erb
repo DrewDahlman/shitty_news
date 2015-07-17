@@ -1,5 +1,4 @@
 <article class='post-headline'>
-	<!-- <div class='poo'><img src='<%= asset_path 'poo.png'%> '/></div> -->
-	<div class='headline'><%= article.title %></div>
+	<a href='/<%= article.category.slug %>/<%= article.hash_url %>' class='headline'><%= article.title %></a>
 	<div class="clearfix"></div>
 </article>

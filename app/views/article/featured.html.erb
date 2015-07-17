@@ -1,0 +1,29 @@
+<div class='content'>
+	<section id='headlines'>
+		<h1>Other Stories</h1>
+		<% @categories.each do | cat | %>
+			<div class='category'>
+				<h2><%= cat.title %></h2>
+				<% cat.articles.where('created_at < ?', @today).order('id DESC').limit(5).each do | article | %>
+					<%= render :partial => "shared/post", locals: ({article: article}) %>
+				<% end %>
+			</div>
+		<% end %>
+	</section>
+	<section id='top-story'>
+		<div id='article-meta'>
+			Posted: <%= time_ago_in_words(@article.created_at.to_s) %>
+			<img src='<%= @article.photo.url %>' width='100%' class='featured'/>
+			<h1><%= @article.title %></h1>
+		</div>
+		<div id='share'>
+			<span id='facebook-button'>
+			<div class="fb-share-button" data-href="http://shitty.news/featured/<%= params[:hash_url] %>" data-layout="button_count"></div>
+			</span>
+			<span id='twitter-button'>
+			<a href="https://twitter.com/share" class="twitter-share-button" data-via="ShittyNewsSite">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+			</span>
+		</div>
+	</section>
+</div>
