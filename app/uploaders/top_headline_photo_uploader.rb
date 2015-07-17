@@ -2,6 +2,8 @@
 
 class TopHeadlinePhotoUploader < CarrierWave::Uploader::Base
 
+  include CarrierWave::RMagick
+  
   storage :fog
 
   # Override the directory where uploaded files will be stored.
@@ -9,6 +11,8 @@ class TopHeadlinePhotoUploader < CarrierWave::Uploader::Base
   def store_dir
     "panels"
   end
+
+  process resize_to_fit: [800, 800]
 
   def extension_white_list
     %w(jpg jpeg gif png)
