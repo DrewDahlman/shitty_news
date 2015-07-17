@@ -18,39 +18,6 @@
 	</section>
 
 	<section id='top-story'>
-		<h1>Super Shitty News</h1>
-		<div class='top-story-photo' style='background-image: url(<%= @topHeadline[0].photo.url %>)'>
-			<div class='top-story-headline'><a href='/featured/<%= @topHeadline[0].hash_url %>'><%= @topHeadline[0].title %></a></div>
-		</div>
-		<div id='others'>
-			<h1>Other headlines:</h1>
-			<% $i = 0 %>
-			<% @categories.each do | cat | %>
-				<div class='cat'>
-				<h1><%= cat.title %></h1>
-				<% cat.articles.where('created_at < ?', @today).order('id DESC').offset(5).limit(5).each do | article | %>
-					<div class='other-news'>
-						<h2><a href='/<%= cat.slug %>/<%= article.hash_url %>'><%= article.title %></a></h2>
-					</div>
-				<% end %>
-				</div>
-				<% if $i == 2 %>
-					<% if @topHeadline[1] %>
-					<div class='top-story-photo' style='background-image: url(<%= @topHeadline[1].photo.url %>)'>
-						<div class='top-story-headline'><%= @topHeadline[1].title %></div>
-					</div>
-					<% end %>
-				<% end %>
-				<% if $i == 5 %>
-					<% if @topHeadline[2] %>
-					<div class='top-story-photo' style='background-image: url(<%= @topHeadline[2].photo.url %>)'>
-						<div class='top-story-headline'><%= @topHeadline[2].title %></div>
-					</div>
-					<% end %>
-				<% end %>
-				<% $i += 1 %>
-			<% end %>
-		</div>
 		<div id='about'>
 			<h1>About SNN</h1>
 			<div>

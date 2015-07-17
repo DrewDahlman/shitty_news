@@ -1,9 +1,15 @@
 ## Shitty.news
 A robot pulls headlines from major news organizations around the internet and creates [markov chains](https://en.wikipedia.org/wiki/Markov_chain) out of their headlines to create super shitty news. This was built in about 24hours so pardon some bits of messy code :P
 
+## Concept
+What happens if a robot writes the news? Headlines these days are so over the top and ridiculous at times that I thought it would be interesting to see what happens when you feed a robot all of these sources and let it write the headlines.
+
+Sometimes the headlines are hilarious, sometimes sad, sometimes they make no sense at all. You will notice how the news cycle works in 24 hours periods, stories will sometimes repeate, this is because the selected news sources are posting the same stories over and over again for clicks and attention.
+
 inspired by:
 - [/r/subredditsimulator](https://www.reddit.com/r/SubredditSimulator/)
-- And friends on Twitter
+- Friends on Twitter
+- Shitty click bait websites all over
 
 ## To build
 - cd into project directory
