@@ -25,6 +25,7 @@
 	<meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
 
+	<% if params[:action] != "show" || params[:action] != "featured" %>
 	<!-- FB -->
 		<meta https-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta property="og:title" content="Shitty News" />
@@ -34,7 +35,16 @@
 		<meta property="og:site_name" content="Shitty News" />
 		<meta property="og:description" content="Your number one source for Shitty News."/>
 	<!-- / FB -->
-
+	<% else %>
+		<meta https-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta property="og:title" content="Shitty News" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="http://shitty.news" />
+		<meta property="og:image" content="http://shitty.news/card.jpg" />
+		<meta property="og:site_name" content="Shitty News" />
+		<meta property="og:description" content="<%= @article.title %>"/>
+	<% end %>
+	
 	<!-- Twitter -->
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="http://shitty.news">
