@@ -1,5 +1,5 @@
 class Article < ActiveRecord::Base
-	has_one :category
+	belongs_to :category
 	before_create :assign_hash
 
 	private

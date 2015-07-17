@@ -1,6 +1,12 @@
 <div class='content'>
 	<section id='headlines'>
 		<h1>Other Stories</h1>
+		<div class='category'>
+			<h2>Popular</h2>
+			<% @trending.each do | article | %>
+				<%= render :partial => "shared/post", locals: ({article: article}) %>
+			<% end %>
+		</div>
 		<% @categories.each do | cat | %>
 			<div class='category'>
 				<h2><%= cat.title %></h2>
@@ -13,6 +19,7 @@
 	<section id='top-story'>
 		<div id='article-meta'>
 			Posted: <%= time_ago_in_words(@article.created_at.to_s) %>
+			<h2><%= @article.category.title %></h2>
 			<h1><%= @article.title %></h1>
 			<div id='share'>
 				<span id='facebook-button'>

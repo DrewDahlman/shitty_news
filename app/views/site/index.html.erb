@@ -1,6 +1,12 @@
 <div class='content'>
 	<section id='headlines'>
 		<h1>Top Shitty Headlines, <%= @today.strftime("%B #{@today.day.ordinalize}, %Y") %></h1>
+		<div class='category'>
+			<h2>Popular</h2>
+			<% @trending.each do | article | %>
+				<%= render :partial => "shared/post", locals: ({article: article}) %>
+			<% end %>
+		</div>
 		<% @categories.each do | cat | %>
 			<div class='category'>
 				<h2><%= cat.title %></h2>
