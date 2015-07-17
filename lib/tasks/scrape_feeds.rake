@@ -123,7 +123,8 @@ namespace :scrape_feeds do
 		terms = ['news','sports','technology','nature','politics','animals']
 
 		args = {
-			tags: "#{terms[rand(0..5)]}",
+			# tags: "#{terms[rand(0..5)]}",
+			text: "#{title}",
 			tag_mode: "all",
 			per_page: 500
 		}
