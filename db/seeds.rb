@@ -64,6 +64,7 @@ categories = [
 		:title => "News",
 		:slug => "news",
 		:urls => [
+			'http://www.shitty.news',
 			'http://www.reddit.com/r/news/.rss',
 			'http://feeds.feedburner.com/MSNBC/',
 			'http://feeds.feedburner.com/CBSnews/',
