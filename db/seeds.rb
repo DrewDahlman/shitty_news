@@ -22,7 +22,8 @@ categories = [
 			'http://rss.cnn.com/rss/cnn_topstories.rss',
 			'http://rss.cnn.com/rss/cnn_world.rss',
 			'http://feeds2.feedburner.com/time/topstories',
-			'http://feeds.feedburner.com/TheOnion/'
+			'http://feeds.feedburner.com/TheOnion/',
+			'http://www.wsj.com/xml/rss/3_7085.xml'
 		]
 	},
 	{
@@ -41,6 +42,8 @@ categories = [
 			'http://rss.cnn.com/rss/cnn_topstories.rss',
 			'http://rss.cnn.com/rss/cnn_tech.rss',
 			'http://feeds.feedburner.com/TechCrunch/',
+			'http://www.theverge.com/rss/frontpage',
+			'http://www.wsj.com/xml/rss/3_7455.xml'
 		]
 	},
 	{
@@ -97,7 +100,9 @@ categories = [
 			'http://rss.cnn.com/rss/money_latest.rss',
 			'https://www.reddit.com/r/business/.rss',
 			'https://www.reddit.com/r/finance/.rss',
-			'http://feeds.feedburner.com/TheOnion/'
+			'http://feeds.feedburner.com/TheOnion/',
+			'http://www.wsj.com/xml/rss/3_7014.xml',
+			'http://www.wsj.com/xml/rss/3_7031.xml'
 		]
 	},
 	{
