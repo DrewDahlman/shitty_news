@@ -1,5 +1,5 @@
 ## Shitty.news
-A robot pulls headlines from major news organizations around the internet and creates [markov chains](https://en.wikipedia.org/wiki/Markov_chain) out of their headlines to create super shitty news.
+A robot pulls headlines from major news organizations around the internet and creates [markov chains](https://en.wikipedia.org/wiki/Markov_chain) out of their headlines to create super shitty news. This was built in about 24hours so pardon some bits of messy code :P
 
 inspired by:
 - [/r/subredditsimulator](https://www.reddit.com/r/SubredditSimulator/)
