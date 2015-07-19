@@ -37,14 +37,14 @@
 				<% if $i == 2 %>
 					<% if @topHeadline[1] %>
 					<div class='top-story-photo' style='background-image: url(<%= @topHeadline[1].photo.url %>)'>
-						<div class='top-story-headline'><%= @topHeadline[1].title %></div>
+						<div class='top-story-headline'><a href='/featured/<%= @topHeadline[1].hash_url %>'><%= @topHeadline[1].title %></a></div>
 					</div>
 					<% end %>
 				<% end %>
 				<% if $i == 5 %>
 					<% if @topHeadline[2] %>
 					<div class='top-story-photo' style='background-image: url(<%= @topHeadline[2].photo.url %>)'>
-						<div class='top-story-headline'><%= @topHeadline[2].title %></div>
+						<div class='top-story-headline'><a href='/featured/<%= @topHeadline[2].hash_url %>'><%= @topHeadline[2].title %></a></div>
 					</div>
 					<% end %>
 				<% end %>

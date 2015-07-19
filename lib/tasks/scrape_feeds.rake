@@ -95,6 +95,14 @@ namespace :scrape_feeds do
 					
 					## if it's long enough but not too long let it pass if not keep moving...
 					if title.length > 5 && title.split(" ").length < 30
+						
+						# ends = ['.','!','?']
+						# ## Check for a period or punctuation at the end
+						# if !title.include?('.') && !title.include?('?') && !title.include?('!')
+						# 	title = title + ends[rand(0..2)]
+						# 	puts title
+						# end
+
 
 						# Print it, it's perfect!
 						Article.where( :title => title, :category_id => cat.id).first_or_create
