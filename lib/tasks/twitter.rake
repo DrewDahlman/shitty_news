@@ -21,7 +21,7 @@ namespace :shitty_tweets do
 		end
 
 		## Get most recent posts
-		recent_articles = Article.where('created_at > ?', 2.hours.ago).order('views DESC').limit(2)
+		recent_articles = Article.where('created_at > ?', 2.hours.ago).order('RANDOM()').limit(2)
 
 		## create our tweet
 		recent_articles.each do | article |
