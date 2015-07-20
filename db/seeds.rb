@@ -23,7 +23,8 @@ categories = [
 			'http://rss.cnn.com/rss/cnn_world.rss',
 			'http://feeds2.feedburner.com/time/topstories',
 			'http://feeds.feedburner.com/TheOnion/',
-			'http://www.wsj.com/xml/rss/3_7085.xml'
+			'http://www.wsj.com/xml/rss/3_7085.xml',
+			'http://feeds.feedburner.com/BBCWorldNews/'
 		]
 	},
 	{
@@ -43,7 +44,8 @@ categories = [
 			'http://rss.cnn.com/rss/cnn_tech.rss',
 			'http://feeds.feedburner.com/TechCrunch/',
 			'http://www.theverge.com/rss/frontpage',
-			'http://www.wsj.com/xml/rss/3_7455.xml'
+			'http://www.wsj.com/xml/rss/3_7455.xml',
+			'http://feeds.feedburner.com/BBCTechnology/'
 		]
 	},
 	{
@@ -57,7 +59,8 @@ categories = [
 			'http://rss.cnn.com/rss/cnn_topstories.rss',
 			'http://rss.cnn.com/rss/cnn_allpolitics.rss',
 			'http://feeds2.feedburner.com/time/topstories',
-			'http://feeds.feedburner.com/TheOnion/'
+			'http://feeds.feedburner.com/TheOnion/',
+			'http://feeds.feedburner.com/BBCPolitics/'
 		]
 	},
 	{
@@ -76,7 +79,8 @@ categories = [
 			'http://rss.cnn.com/rss/cnn_topstories.rss',
 			'http://rss.cnn.com/rss/cnn_us.rss',
 			'http://feeds2.feedburner.com/time/topstories',
-			'http://feeds.feedburner.com/TheOnion/'
+			'http://feeds.feedburner.com/TheOnion/',
+			'http://feeds.feedburner.com/BBCNews/'
 		]
 	},
 	{
@@ -85,7 +89,8 @@ categories = [
 		:urls => [
 			'http://www.reddit.com/r/gaming/.rss',
 			'http://www.wired.com/category/reviews/feed/',
-			'http://feeds.foxnews.com/foxnews/opinion',		]
+			'http://feeds.foxnews.com/foxnews/opinion'
+		]
 	},
 	{
 		:title => "Business",
@@ -117,7 +122,8 @@ categories = [
 			'http://rss.cnn.com/rss/cnn_topstories.rss',
 			'https://www.reddit.com/r/science/.rss',
 			'https://www.reddit.com/r/shittyaskscience/.rss',
-			'http://feeds.feedburner.com/TheOnion/'
+			'http://feeds.feedburner.com/TheOnion/',
+			'http://feeds.feedburner.com/BBCScience/'
 		]
 	},
 	{
