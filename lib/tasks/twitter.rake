@@ -21,13 +21,13 @@ namespace :shitty_tweets do
 		end
 
 		## Get most recent posts
-		recent_articles = Article.where('created_at > ?', 30.minutes.ago).order('RANDOM()').limit(2)
+		recent_articles = Article.where('created_at > ?', 2.hours.ago).order('RANDOM()').limit(2)
 
 		## create our tweet
 		recent_articles.each do | article |
 			hash_tag = article.category.title.gsub(' ','')
 			tweet = "##{hash_tag} #{article.title}"
-			tweet = tweet.truncate(140, omission: '...', separator: ' ')
+			tweet = tweet.truncate(110, omission: '...', separator: ' ')
 			tweet = "#{tweet} http://shitty.news/#{article.category.slug}/#{article.hash_url}"
 
 			## Tweet it
@@ -51,7 +51,7 @@ namespace :shitty_tweets do
 		top_headlines.each do | article |
 			hash_tag = article.category.title.gsub(' ','')
 			tweet = "#trending ##{hash_tag} #{article.title}"
-			tweet = tweet.truncate(140, omission: '...', separator: ' ')
+			tweet = tweet.truncate(110, omission: '...', separator: ' ')
 			tweet = "#{tweet} http://shitty.news/#{article.category.slug}/#{article.hash_url}"
 
 			## Tweet it
