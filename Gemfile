@@ -10,6 +10,9 @@ gem 'pg'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
+## Social things dawg
+gem 'twitter'
+
 ## Caching
 gem 'actionpack-action_caching'
 
