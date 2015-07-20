@@ -128,7 +128,7 @@ namespace :scrape_feeds do
 		FlickRaw.api_key = ENV["FLICKR_KEY"]
 		FlickRaw.shared_secret = ENV["FLICKR_SECRET"]
 		
-		terms = ['news','sports','technology','nature','politics','animals']
+		terms = ['news','sports','technology','nature','politics','animals','sad','happy','dancing','party','peace','rest','fresh']
 
 		args = {
 			tags: "#{terms[rand(0..5)]}",
