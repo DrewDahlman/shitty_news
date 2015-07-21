@@ -24,7 +24,8 @@ categories = [
 			'http://feeds2.feedburner.com/time/topstories',
 			'http://feeds.feedburner.com/TheOnion/',
 			'http://www.wsj.com/xml/rss/3_7085.xml',
-			'http://feeds.feedburner.com/BBCWorldNews/'
+			'http://feeds.feedburner.com/BBCWorldNews/',
+			'https://www.reddit.com/r/nottheonion/.rss'
 		]
 	},
 	{
@@ -45,7 +46,8 @@ categories = [
 			'http://feeds.feedburner.com/TechCrunch/',
 			'http://www.theverge.com/rss/frontpage',
 			'http://www.wsj.com/xml/rss/3_7455.xml',
-			'http://feeds.feedburner.com/BBCTechnology/'
+			'http://feeds.feedburner.com/BBCTechnology/',
+			'https://www.reddit.com/r/nottheonion/.rss'
 		]
 	},
 	{
@@ -60,7 +62,8 @@ categories = [
 			'http://rss.cnn.com/rss/cnn_allpolitics.rss',
 			'http://feeds2.feedburner.com/time/topstories',
 			'http://feeds.feedburner.com/TheOnion/',
-			'http://feeds.feedburner.com/BBCPolitics/'
+			'http://feeds.feedburner.com/BBCPolitics/',
+			'https://www.reddit.com/r/nottheonion/.rss'
 		]
 	},
 	{
@@ -80,7 +83,8 @@ categories = [
 			'http://rss.cnn.com/rss/cnn_us.rss',
 			'http://feeds2.feedburner.com/time/topstories',
 			'http://feeds.feedburner.com/TheOnion/',
-			'http://feeds.feedburner.com/BBCNews/'
+			'http://feeds.feedburner.com/BBCNews/',
+			'https://www.reddit.com/r/nottheonion/.rss'
 		]
 	},
 	{
@@ -89,7 +93,8 @@ categories = [
 		:urls => [
 			'http://www.reddit.com/r/gaming/.rss',
 			'http://www.wired.com/category/reviews/feed/',
-			'http://feeds.foxnews.com/foxnews/opinion'
+			'http://feeds.foxnews.com/foxnews/opinion',
+			'https://www.reddit.com/r/nottheonion/.rss'
 		]
 	},
 	{
@@ -107,7 +112,8 @@ categories = [
 			'https://www.reddit.com/r/finance/.rss',
 			'http://feeds.feedburner.com/TheOnion/',
 			'http://www.wsj.com/xml/rss/3_7014.xml',
-			'http://www.wsj.com/xml/rss/3_7031.xml'
+			'http://www.wsj.com/xml/rss/3_7031.xml',
+			'https://www.reddit.com/r/nottheonion/.rss'
 		]
 	},
 	{
@@ -123,7 +129,8 @@ categories = [
 			'https://www.reddit.com/r/science/.rss',
 			'https://www.reddit.com/r/shittyaskscience/.rss',
 			'http://feeds.feedburner.com/TheOnion/',
-			'http://feeds.feedburner.com/BBCScience/'
+			'http://feeds.feedburner.com/BBCScience/',
+			'https://www.reddit.com/r/nottheonion/.rss'
 		]
 	},
 	{
@@ -139,7 +146,8 @@ categories = [
 			'http://api.foxsports.com/v1/rss?partnerKey=zBaFxRyGKCfxBagJG9b8pqLyndmvo7UU&tag=nascar',
 			'http://api.foxsports.com/v1/rss?partnerKey=zBaFxRyGKCfxBagJG9b8pqLyndmvo7UU&tag=tennis',
 			'http://api.foxsports.com/v1/rss?partnerKey=zBaFxRyGKCfxBagJG9b8pqLyndmvo7UU&tag=olympics',
-			'https://www.reddit.com/r/nfl/.rss'
+			'https://www.reddit.com/r/nfl/.rss',
+			'https://www.reddit.com/r/nottheonion/.rss'
 		]
 	}
 ]
