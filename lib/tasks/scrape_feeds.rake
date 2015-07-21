@@ -65,7 +65,7 @@ namespace :scrape_feeds do
 		Category.where.not(slug: 'top_headline').order("RANDOM()").each do | cat |
 
 			## Define our sources based on the category
-			sources = cat.sources.where(["sources.created_at > ?", 1.hours.ago]).order("RANDOM()")
+			sources = cat.sources.where(["sources.created_at > ?", 2.hours.ago]).order("RANDOM()")
 			$i = 0
 			while $i < rand(1..3)
 				## Create empty dictionary to use

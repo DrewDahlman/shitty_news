@@ -7,8 +7,8 @@ class Article < ActiveRecord::Base
 	#--------------------------------------------------------------
 	#
 	#   Determine rank based on this formula
-	# 	(p / (t - c) / 3600) ** 1.2
-	# 	(PostTime / (TimeNow - TimeCreated) / HOURS_IN_DAY) ** 1.2
+	# 	(v / (t - c) / 3600) ** 1.2
+	# 	(Views / (TimeNow - TimeCreated) / 1 hour) ** 1.2
 	#
 	#--------------------------------------------------------------
 	def rank
