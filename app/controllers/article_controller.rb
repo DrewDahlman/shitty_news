@@ -7,7 +7,7 @@ class ArticleController < ApplicationController
   def show
     @today = Time.now
     @categories = Category.all
-    @trending = Article.all.order('views DESC').limit(7)
+    @trending = Article.all.sort_by(&:rank).reverse.take(7)
 
     @article = Article.find_by_hash_url(params[:hash_url])
     @views = @article.views
@@ -20,7 +20,7 @@ class ArticleController < ApplicationController
   def featured
     @today = Time.now
     @categories = Category.all
-    @trending = Article.all.order('views DESC').limit(7)
+    @trending = Article.all.sort_by(&:rank).reverse.take(7)
     
     @article = TopHeadline.find_by_hash_url(params[:hash_url])
     @views = @article.views
