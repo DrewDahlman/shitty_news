@@ -20,7 +20,7 @@
 	<section id='top-story'>
 		<h1>Super Shitty News</h1>
 		<div class='top-story-photo' style='background-image: url(<%= @topHeadline[0].photo.url %>)'>
-			<div class='top-story-headline'><a href='/featured/<%= @topHeadline[0].hash_url %>'><%= @topHeadline[0].title %></a></div>
+			<div class='top-story-headline'><a href='/featured/<%= @topHeadline[0].hash_url %>'><%= strip_tags(@topHeadline[0].title) %></a></div>
 		</div>
 		<div id='others'>
 			<h1>Other headlines:</h1>
@@ -30,21 +30,21 @@
 				<h1><%= cat.title %></h1>
 				<% cat.articles.where('created_at < ?', @today).order('id DESC').offset(5).limit(5).each do | article | %>
 					<div class='other-news'>
-						<h2><a href='/<%= cat.slug %>/<%= article.hash_url %>'><%= article.title.html_safe %></a></h2>
+						<h2><a href='/<%= cat.slug %>/<%= article.hash_url %>'><%= strip_tags(article.title) %></a></h2>
 					</div>
 				<% end %>
 				</div>
 				<% if $i == 2 %>
 					<% if @topHeadline[1] %>
 					<div class='top-story-photo' style='background-image: url(<%= @topHeadline[1].photo.url %>)'>
-						<div class='top-story-headline'><a href='/featured/<%= @topHeadline[1].hash_url %>'><%= @topHeadline[1].title %></a></div>
+						<div class='top-story-headline'><a href='/featured/<%= @topHeadline[1].hash_url %>'><%= strip_tags(@topHeadline[1].title) %></a></div>
 					</div>
 					<% end %>
 				<% end %>
 				<% if $i == 5 %>
 					<% if @topHeadline[2] %>
 					<div class='top-story-photo' style='background-image: url(<%= @topHeadline[2].photo.url %>)'>
-						<div class='top-story-headline'><a href='/featured/<%= @topHeadline[2].hash_url %>'><%= @topHeadline[2].title %></a></div>
+						<div class='top-story-headline'><a href='/featured/<%= @topHeadline[2].hash_url %>'><%= strip_tags(@topHeadline[2].title) %></a></div>
 					</div>
 					<% end %>
 				<% end %>

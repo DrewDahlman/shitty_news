@@ -51,7 +51,7 @@
 			<meta property="og:image" content="http://shitty.news/card.jpg" />
 		<% end %>
 		<meta property="og:site_name" content="Shitty News" />
-		<meta property="og:description" content="<%= @article.title %>"/>
+		<meta property="og:description" content="<%= strip_tags(@article.title) %>"/>
 	<% end %>
 	
 	<!-- Twitter -->
@@ -59,8 +59,13 @@
 	<meta name="twitter:site" content="http://shitty.news">
 	<meta name="twitter:creator" content="@meuspartum">
 	<meta name="twitter:title" content="Shitty News">
+	<% if params[:action] != "show" && params[:action] != "featured" %>
 	<meta name="twitter:description" content="Your number one source for Shitty News.">
 	<meta name="twitter:image:src" content="http://shitty.news/card.jpg">
+	<% else %>
+	<meta name="twitter:description" content="<%= strip_tags(@article.title) %>">
+	<meta name="twitter:image:src" content="<%= @article.photo.url %>">
+	<% end %>
 	<!-- /Twitter -->
 
 	<script>

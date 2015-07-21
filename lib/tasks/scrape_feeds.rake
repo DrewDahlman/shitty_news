@@ -91,19 +91,11 @@ namespace :scrape_feeds do
 					## Mod the text a bit
 					# title = generator.get_sentences( 1 )[0].capitalize.gsub("  ", " ")
 					title = markov.generate_n_sentences 1
-					title = title.capitalize.gsub("<title>"," ").gsub("</title>"," ").gsub("  ", " ")
+					title = title.capitalize.gsub("  ", " ")
 					
 					## if it's long enough but not too long let it pass if not keep moving...
 					if title.length > 5 && title.split(" ").length < 30
 						
-						# ends = ['.','!','?']
-						# ## Check for a period or punctuation at the end
-						# if !title.include?('.') && !title.include?('?') && !title.include?('!')
-						# 	title = title + ends[rand(0..2)]
-						# 	puts title
-						# end
-
-
 						# Print it, it's perfect!
 						Article.where( :title => title, :category_id => cat.id).first_or_create
 						$i += 1
@@ -122,7 +114,7 @@ namespace :scrape_feeds do
 		## Mod the text a bit
 		# title = generator.get_sentences( 1 )[0].capitalize.gsub("  ", " ")
 		title = markov.generate_n_sentences 1
-		title = title.capitalize.gsub("<title>"," ").gsub("</title>"," ").gsub("  ", " ")
+		title = title.capitalize.gsub("  ", " ")
 
 		## Get a flicker image
 		FlickRaw.api_key = ENV["FLICKR_KEY"]

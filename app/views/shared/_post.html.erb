@@ -1,4 +1,4 @@
 <article class='post-headline'>
-	<a href='/<%= article.category.slug %>/<%= article.hash_url %>' class='headline'><%= article.title.html_safe %></a>
+	<a href='/<%= article.category.slug %>/<%= article.hash_url %>' class='headline'><%= strip_tags(article.title) %></a>
 	<div class="clearfix"></div>
 </article>
