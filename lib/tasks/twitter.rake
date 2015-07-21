@@ -26,7 +26,7 @@ namespace :shitty_tweets do
 		## create our tweet
 		recent_articles.each do | article |
 			hash_tag = article.category.title.gsub(' ','')
-			tweet = "##{hash_tag} #{strip_tags(article.title)}"
+			tweet = "##{hash_tag} #{ActionController::Base.helpers.strip_tags(article.title)}"
 			tweet = tweet.truncate(110, omission: '...', separator: ' ')
 			tweet = "#{tweet} http://shitty.news/#{article.category.slug}/#{article.hash_url}"
 
@@ -50,7 +50,7 @@ namespace :shitty_tweets do
 		## create our tweet
 		top_headlines.each do | article |
 			hash_tag = article.category.title.gsub(' ','')
-			tweet = "#trending ##{hash_tag} #{strip_tags(article.title)}"
+			tweet = "#trending ##{hash_tag} #{ActionController::Base.helpers.strip_tags(article.title)}"
 			tweet = tweet.truncate(110, omission: '...', separator: ' ')
 			tweet = "#{tweet} http://shitty.news/#{article.category.slug}/#{article.hash_url}"
 
