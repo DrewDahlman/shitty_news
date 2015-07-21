@@ -22,7 +22,7 @@ gem 'jquery-rails'
 gem 'flickraw'
 
 ## Markov Chains v1
-gem 'marky_markov'
+gem 'marky_markov', :git => 'https://github.com/DrewDahlman/marky_markov.git'
 gem "markov_chains"
 
 ## Uploads

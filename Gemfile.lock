@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/DrewDahlman/marky_markov.git
+  revision: 099fc67aa2e43f1229edb77e2e987a3a3ee42fca
+  specs:
+    marky_markov (0.3.5)
+      msgpack
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -180,8 +187,6 @@ GEM
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
     markov_chains (0.1.1)
-    marky_markov (0.3.5)
-      msgpack
     memoizable (0.4.2)
       thread_safe (~> 0.3, >= 0.3.1)
     method_source (0.8.2)
@@ -283,7 +288,7 @@ DEPENDENCIES
   fog
   jquery-rails
   markov_chains
-  marky_markov
+  marky_markov!
   nginx
   pg
   pry-debugger

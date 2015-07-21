@@ -30,7 +30,7 @@
 				<h1><%= cat.title %></h1>
 				<% cat.articles.where('created_at < ?', @today).order('id DESC').offset(5).limit(5).each do | article | %>
 					<div class='other-news'>
-						<h2><a href='/<%= cat.slug %>/<%= article.hash_url %>'><%= article.title %></a></h2>
+						<h2><a href='/<%= cat.slug %>/<%= article.hash_url %>'><%= article.title.html_safe %></a></h2>
 					</div>
 				<% end %>
 				</div>

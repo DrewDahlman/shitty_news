@@ -21,7 +21,7 @@
 			Posted: <%= time_ago_in_words(@article.created_at.to_s) %><br/>
 			<h2>Featured Story</h2>
 			<img src='<%= @article.photo.url %>' width='100%' class='featured'/>
-			<h1><%= @article.title %></h1>
+			<h1><%= @article.title.html_safe %></h1>
 			<div id='share'>
 				<span id='facebook-button'>
 				<div class="fb-share-button" data-href="http://shitty.news/featured/<%= params[:hash_url] %>" data-layout="button_count"></div>
