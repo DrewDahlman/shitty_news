@@ -61,10 +61,14 @@
 	<meta name="twitter:title" content="Shitty News">
 	<% if params[:action] != "show" && params[:action] != "featured" %>
 	<meta name="twitter:description" content="Your number one source for Shitty News.">
-	<meta name="twitter:image:src" content="http://shitty.news/card.jpg">
 	<% else %>
 	<meta name="twitter:description" content="<%= strip_tags(@article.title) %>">
+	<% end %>
+
+	<% if params[:action] == "featured" %>
 	<meta name="twitter:image:src" content="<%= @article.photo.url %>">
+	<% else %>
+	<meta name="twitter:image:src" content="http://shitty.news/card.jpg">
 	<% end %>
 	<!-- /Twitter -->
 
