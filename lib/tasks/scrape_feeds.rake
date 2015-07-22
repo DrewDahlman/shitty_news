@@ -38,6 +38,7 @@ namespace :scrape_feeds do
 						feed.items.each do |item|
 
 							if item.title != nil && item.link != nil
+
 									## Create a source
 									source = Source.where(:title => item.title, :link => item.link, :url_id => url.id).first_or_create
 							end
@@ -73,6 +74,13 @@ namespace :scrape_feeds do
 
 				## Loop over the sources
 				sources.each do | source |
+
+					## Maybe add some punctuation in there?
+					# if source.title !=~ /\.!?/
+					# 	marks = ['.','?','!']
+					# 	source.title = source.title.to_s + marks[rand(0..2)]
+					# end
+
 					## Fill the dictionary
 					tmp_dict = tmp_dict + source.title.to_s.downcase + " \n "
 					top_dict = top_dict + source.title.to_s.downcase + " \n "

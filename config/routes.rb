@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  root "site#index"
 
+  ## Everything else
+  root "site#index"
   get "about" => "site#about"
   get "update" => "site#update" ## Just clears the cache real quick
   get "/featured/:hash_url" => "article#featured"
