@@ -20,7 +20,7 @@
 		<div id='article-meta'>
 			Posted: <%= time_ago_in_words(@article.created_at.to_s) %>
 			<h2><%= @article.category.title %></h2>
-			<h1><%= strip_tags(@article.title) %></h1>
+			<h1><%= strip_tags(@article.title).html_safe %></h1>
 			<div id='share'>
 				<span id='facebook-button'>
 				<div class="fb-share-button" data-href="http://shitty.news/<%= params[:category] %>/<%= params[:hash_url] %>" data-layout="button_count"></div>
