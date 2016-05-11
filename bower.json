@@ -16,7 +16,7 @@
   ],
   "dependencies": {
     "jquery": null,
-    "modernizr": null,
+    "modernizr": "2.8.3",
     "underscore": null
   }
 }
