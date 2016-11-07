@@ -12,8 +12,8 @@ categories = [
 		:title => "World News",
 		:slug => "world_news",
 		:urls => [
-			'http://www.reddit.com/r/worldnews/.rss',
-			'http://www.reddit.com/r/news/.rss',
+			'https://www.reddit.com/r/worldnews/.rss',
+			'https://www.reddit.com/r/news/.rss',
 			'http://feeds.feedburner.com/MSNBC/',
 			'http://feeds.foxnews.com/foxnews/latest',
 			'http://feeds.foxnews.com/foxnews/most-popular',
@@ -32,7 +32,7 @@ categories = [
 		:title => "Technology",
 		:slug => "technology",
 		:urls => [
-			'http://www.reddit.com/r/technology/.rss',
+			'https://www.reddit.com/r/technology/.rss',
 			'http://feeds.feedburner.com/Wired/',
 			'http://www.wired.com/category/gear/feed/',
 			'http://www.wired.com/category/reviews/feed/',
@@ -55,7 +55,7 @@ categories = [
 		:slug => "politics",
 		:urls => [
 			'http://feeds.foxnews.com/foxnews/latest',
-			'http://www.reddit.com/r/politics/.rss',
+			'https://www.reddit.com/r/politics/.rss',
 			'http://feeds.foxnews.com/foxnews/most-popular',
 			'http://feeds.foxnews.com/foxnews/opinion',
 			'http://rss.cnn.com/rss/cnn_topstories.rss',
@@ -70,7 +70,7 @@ categories = [
 		:title => "News",
 		:slug => "news",
 		:urls => [
-			'http://www.reddit.com/r/news/.rss',
+			'https://www.reddit.com/r/news/.rss',
 			'http://feeds.feedburner.com/MSNBC/',
 			'http://feeds.feedburner.com/CBSnews/',
 			'http://feeds.feedburner.com/Mashable/',
@@ -91,7 +91,7 @@ categories = [
 		:title => "Gaming",
 		:slug => "gaming",
 		:urls => [
-			'http://www.reddit.com/r/gaming/.rss',
+			'https://www.reddit.com/r/gaming/.rss',
 			'http://www.wired.com/category/reviews/feed/',
 			'http://feeds.foxnews.com/foxnews/opinion',
 			'https://www.reddit.com/r/nottheonion/.rss'
