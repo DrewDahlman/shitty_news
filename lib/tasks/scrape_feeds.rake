@@ -28,7 +28,7 @@ namespace :scrape_feeds do
   			source_url = url.url
 
   			## Open the RSS feed
-  			open(source_url) do |rss|
+  			open(source_url, {ssl_verify_mode: OpenSSL::SSL::VERIFY_NONE}) do |rss|
 
   				begin
 	  				## Parse the feed
@@ -37,14 +37,10 @@ namespace :scrape_feeds do
 						## Loop over each feed item
 						feed.items.each do |item|
 
-							begin
-								if item.title != nil && item.link != nil
+							if item.title != nil && item.link != nil
 
-										## Create a source
-										source = Source.where(:title => item.title, :link => item.link, :url_id => url.id).first_or_create
-								end
-							rescue
-
+									## Create a source
+									source = Source.where(:title => item.title, :link => item.link, :url_id => url.id).first_or_create
 							end
 						end
 					rescue
