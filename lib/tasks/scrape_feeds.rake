@@ -27,27 +27,32 @@ namespace :scrape_feeds do
   			## Create the source URL
   			source_url = url.url
 
-  			## Open the RSS feed
-  			open(source_url, {ssl_verify_mode: OpenSSL::SSL::VERIFY_NONE}) do |rss|
+  			begin
+	  			## Open the RSS feed
+	  			open(source_url) do |rss|
 
-  				begin
-	  				## Parse the feed
-						feed = RSS::Parser.parse(rss)
+	  				begin
+		  				## Parse the feed
+							feed = RSS::Parser.parse(rss)
 
-						## Loop over each feed item
-						feed.items.each do |item|
+							## Loop over each feed item
+							feed.items.each do |item|
 
-							if item.title != nil && item.link != nil
+								if item.title != nil && item.link != nil
 
-									## Create a source
-									source = Source.where(:title => item.title, :link => item.link, :url_id => url.id).first_or_create
+										## Create a source
+										source = Source.where(:title => item.title, :link => item.link, :url_id => url.id).first_or_create
+								end
 							end
+						rescue
+
 						end
-					rescue
 
-					end
+	  			end
 
-  			end
+	  		rescue
+
+	  		end
   		end
   	end
 		Rake::Task['scrape_feeds:create'].invoke
