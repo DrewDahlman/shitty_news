@@ -37,10 +37,14 @@ namespace :scrape_feeds do
 						## Loop over each feed item
 						feed.items.each do |item|
 
-							if item.title != nil && item.link != nil
+							begin
+								if item.title != nil && item.link != nil
 
-									## Create a source
-									source = Source.where(:title => item.title, :link => item.link, :url_id => url.id).first_or_create
+										## Create a source
+										source = Source.where(:title => item.title, :link => item.link, :url_id => url.id).first_or_create
+								end
+							rescue
+
 							end
 						end
 					rescue
